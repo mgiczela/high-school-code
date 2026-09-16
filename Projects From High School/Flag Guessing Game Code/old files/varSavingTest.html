@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "b2">
+        number
+    </div>
+
+    <button id = "b1">
+        fillerTEXT
+    </button>
+
+    <button id = "b3">
+        reset
+    </button>
+
+    <script>
+        // Check if the value exists in localStorage when the page loads
+        if (localStorage.getItem('v1') === null) {
+            // If not, initialize it
+            localStorage.setItem('v1', 0);
+        }
+
+        let v1 =  Number((localStorage.getItem('v1')));
+        
+        const button = document.getElementById("b1");
+        const txt = document.getElementById("b2");
+        const reset = document.getElementById("b3");
+
+        txt.innerHTML = `${v1}`;
+
+        button.onclick = function() {
+            txt.innerHTML = `${v1 + 1}`;
+            v1 += 1;
+            localStorage.setItem('v1', `${v1}`);
+        }
+        reset.onclick = function() {
+            localStorage.setItem('v1', 0);
+            v1 = 0;
+            txt.innerHTML = `${0}`;
+        }
+
+    </script>
+
+
+</body>
+</html>

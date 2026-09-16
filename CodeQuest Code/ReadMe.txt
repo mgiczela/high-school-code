@@ -1,0 +1,3 @@
+This is code from my preparation for Lockheed Martin Code Quest February 28 2026 in Forth Worth, Texas.
+
+It also includes a folder for problems completed during the actual competition itself, in which we finished just outside the podium positions for the “beginner” group. I participated as one of 3 group members, where I wrote all the code and was equally involved in coming up with its logic and algorithms. 
